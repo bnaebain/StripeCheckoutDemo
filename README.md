@@ -20,4 +20,8 @@ Utilizes Stripe Payment Intent, Customer Creation, and Web Elements
 
 
 
-<video src='https://streamable.com/lxy1a0' width=180/></video>
+
+https://github.com/bnaebain/StripeCheckoutDemo/assets/89875892/681c1f9b-0090-41af-98c1-0f96b54eb997
+
+
+
