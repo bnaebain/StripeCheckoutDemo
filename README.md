@@ -9,10 +9,11 @@ Utilizes Stripe Payment Intent, Customer Creation, and Web Elements
 4. Stripe
 
 ## How to run ##
-1. Run ./setup.sh to create virtual environment and database
-2. Run ./start.sh to host
-3. Enter localhost:8080 in the browser
-4. Products added at localhost:8080/add
-5. User Registration (Email not validated)
+1. Add your Stripe API keys to the .env file
+2. Run ./setup.sh to create virtual environment and database
+3. Run ./start.sh to host
+4. Enter localhost:8080 in the browser
+5. Products added at localhost:8080/add
+6. User Registration (Email not validated)
 6: Proceed with checkout
 
