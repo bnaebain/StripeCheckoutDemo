@@ -17,3 +17,5 @@ Utilizes Stripe Payment Intent, Customer Creation, and Web Elements
 6. User Registration (Email not validated)
 6: Proceed with checkout
 
+
+<video src='https://streamable.com/lxy1a0' width=180/>
