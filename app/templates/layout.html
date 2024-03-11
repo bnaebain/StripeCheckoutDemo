@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href={{ url_for('static', filename='css/home.css') }} />
+    <link rel="stylesheet" href={{ url_for('static', filename='css/cart.css') }} />
+    <link rel="stylesheet" href={{ url_for('static', filename='css/productDescription.css') }} />
+  
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/application.css') }}" />
+    <script src="{{ url_for('static', filename = 'js/validateForm.js') }}"> </script>
+
+
+
+    <title>Stripe Demo</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/">
+        <img
+          src="{{ url_for('static', filename='images/PElogo.png') }}"
+          alt="Stripe S Logo"
+          style="width:100px;height:100px;"
+          class = "padding"
+        />
+      </a>
+      
+      <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Home </a> 
+      <a href="/cart"><i class="fa fa-fw fa-search"></i> Cart </a> 
+      <a href="/logout"><i class="fa fa-fw fa-user"></i> Sign Out: {{firstName}}</a>
+    </div>
+  
+
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+  </body>
+</html>

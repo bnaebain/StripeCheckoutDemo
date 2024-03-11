@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="cartItems">
+	<h3 style="font-family:helvetica;">Shopping Cart</h3>
+	<div id="tableItems">
+		{% for row in products %}
+		<div>
+			<hr id="seperator">
+			<div id="itemImage">
+				<img src={{url_for('static', filename='uploads/'+row[3])}} id="image"/>
+			</div>
+			<div id="itemName">
+				<span id="itemNameTag">{{row[1]}}</span><br>
+				In stock<br>
+				<div class ="right">
+					<a href="/removeFromCart?productId={{row[0]}}">Remove</a>
+				</div>
+			</div>
+			<div id="itemPrice">
+				💸 {{row[2]}}
+			</div>
+		</div>
+		{% endfor %}
+		<hr id="seperator">
+		<div id="total">
+			<span style="font-family:helvetica;"id="subtotal">Subtotal</span> : 💸 {{totalPrice}}
+
+		</div>
+	</div>
+</div>
+<div class ="right">
+	<a href="/checkout">Checkout</a>
+</div>
+
+{% endblock %}
+

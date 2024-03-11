@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div>
+	<p> {{error}} </p>
+	<form action="/login" method="POST">
+		<p>Email: <input type="text" name="email"></p>
+		<p>Password: <input type="password" name="password"></p>
+		<p><input type="submit"></p>
+		<a href="/registerationForm">Register here</a>
+	</form> <br> <br>
+
+
+	<h6>Previously Registered Users:</h6>
+
+	<table cellpadding="8" cellspacing="8"> 
+		<thead>
+		  <tr>
+			<th>Email</th>
+			<th>Name</th>
+		  </tr>
+		</thead>
+		{% for data in userData %}
+		<tbody>
+			{% for row in data %}
+			<td align="position"valign="right">
+				{{row[0:]}}
+			</td>
+			{% endfor %}
+		</tbody>
+		{% endfor %}
+	</table>
+
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <title>Confirmation</title>
+
+    <div class="status-container">
+        <div class="status">
+            <img src="{{ url_for('static', filename='images/partyon.png') }}" class="status-image"/>
+            <p class="status-message">Your order has been successfully placed.</p>
+            <a class="button" href="/">Return Home</a>
+        </div>
+    </div>
+{% endblock %}

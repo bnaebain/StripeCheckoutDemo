@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{{ url_for('static', filename='js/checkout.js') }}"></script>
+<link rel="stylesheet" href={{ url_for('static', filename='css/checkout.css') }} />
+
+
+
+
+
+<body style="font-family: Arial" >
+        <div>
+            <p>
+                <h4>Try a <a href="https://stripe.com/docs/testing#cards" target="_blank">test card</a>:</h4>
+                <div>
+                  <code>4242424242424242</code> (Visa)
+                </div>
+                <div>
+                  <code>5555555555554444</code> (Mastercard)
+                </div>
+                <div>
+                  <code>4000002500003155</code> (Requires <a href="https://www.youtube.com/watch?v=2kc-FjU2-mY" target="_blank">3DSecure</a>)
+                </div>
+                <div>
+                    <code>4000000000000002</code> (Generic Decline)
+                </div>
+                <div>
+                    <code>4100000000000019</code> (Fraud Rejection)
+                </div>
+              </p>
+        
+              <p>
+                Use any future expiration, any 3 digit CVC, and any postal code.
+              </p>    
+            <!-- Display Address Form -->
+            <form id="address-form">
+                <div id="address-element">
+                  <!-- Elements will create form elements here -->
+                </div>
+              </form><br>
+            
+            <!-- Display a payment form -->
+            <form id="payment-form">
+              <div id="payment-element">
+                <!--Stripe.js injects the Payment Element-->
+              </div>
+              <button id="submit">
+                <div class="spinner hidden" id="spinner"></div>
+                <span id="button-text">Pay now</span>
+              </button>
+              <div id="payment-message" class="hidden"></div>
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </body>
+<script >
+document
+	.querySelector("#payment-form")
+	.addEventListener("submit", handleSubmit);
+</script>
+{% endblock %}

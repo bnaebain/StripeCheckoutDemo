@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="display">
+	<div id="productName">
+		<h1 style="font-family:helvetica;">{{data[1]}}</h1>
+	</div>
+	<div>
+		<img src={{url_for('static', filename='uploads/'+data[4]) }} id="productImage"/>
+	</div>
+
+	<div id="productDescription">
+		<h2 style="font-family:helvetica;">Details</h2>
+		<table id="descriptionTable">
+			<tr>
+				<td>Name</td>
+				<td>{{data[1]}}</td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td>${{data[2]}}</td>
+			</tr>
+			<tr>
+				<td>Stock</td>
+				<td>{{data[5]}}</td>
+			</tr>
+		</table>
+		<h2 style="font-family:helvetica;">Description</h2>
+		<p>{{data[3]}}</p>
+	</div>
+	<div id="addToCart">
+		<a href="/addToCart?productId={{request.args.get('productId')}}">Add to Cart</a>
+	</div>
+</div>
+</body>
+</html>
+{% endblock %}
