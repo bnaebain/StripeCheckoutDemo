@@ -1,4 +1,4 @@
-# Shopping Cart  
+# Planet Express 
 A Futurama inspired E-commerce website using Flask, and Stripe. 
 Utilizes Stripe Payment Intent, Customer Creation, and Web Elements
   
